@@ -10,6 +10,7 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
+    <script src="./scripts/index.js" defer></script>
   </head>
   <body>
     <main>
@@ -21,15 +22,9 @@
             <input id="numScoops" name="numScoops" type="number" required />
           </div>
           <div class="mb-3">
-            <input
-              type="radio"
-              name="coneOrCup"
-              id="coneOrCup"
-              value="cone"
-              checked
-            />
+            <input type="radio" name="coneOrCup" id="coneOrCup" value="cone" />
             <label for="coneOrCup">Cone</label>
-            <input type="radio" name="coneOrCup" id="coneOrCup" value="cup" />
+            <input type="radio" name="coneOrCup" id="cup" value="cup" checked />
             <label for="coneOrCup">Cup</label>
           </div>
           <section class="my-3 w-50" id="toppings">
@@ -46,8 +41,9 @@
               <input id="cherry" name="cherry" type="checkbox" />
               <label for="cherry">Cherry ($0.25)</label>
             </div>
+            `
           </section>
-          <button>Submit Order</button>
+          <button type="submit">Submit Order</button>
         </form>
 
         <!-- Div that will hold the output of the rental car estimator -->
