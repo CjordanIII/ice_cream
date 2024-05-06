@@ -23,13 +23,13 @@ theForm.addEventListener("submit", (e) => {
   let taxRate = 0.07;
   let tax;
   let total;
+  let varholde;
   const sprinkles = e.target.sprikles.checked;
   const whippedCream = e.target.whippedCream.checked;
   const hotFudge = e.target.hotFudge.checked;
   const cherry = e.target.cherry.checked;
   if (scoop == 1) {
-    totalCost = baseCost + taxRate * baseCost;
-    totalCost.toFixed(2);
+    totalCost = baseCost;
   } else if (scoop > 1) {
     totalCost = scoop * 1.25 + baseCost;
     totalCost.toFixed(2);
@@ -53,7 +53,7 @@ theForm.addEventListener("submit", (e) => {
       totalCost += 0.25;
     }
   }
-  tax = totalCost * taxRate;
+  tax = taxRate * baseCost;
   total = totalCost + tax;
   showDiv.innerHTML = `<div>
   <h2>Your Order</h2>
